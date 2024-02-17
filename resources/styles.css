@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
-    --primary-color: #706993;
-    --primary-color2: #331e38;
-    --secondary-color: #a0c1b9;
-    --tertiary-color: #f4f3c1;
+    --primary-color: #243b55;
+    --primary-color2: #fafafa;
+    --secondary-color: #e30022;
+    --tertiary-color: #1b1b1b;
+    --tertiary-color2: #ffbf00;
 }
 
 * {
@@ -17,7 +18,7 @@
 
 .container {
     background: var(--primary-color);
-    color: var(--primary-color2);
+    color: var(--tertiary-color2);
     padding: 2rem;
     width: 40%;
     margin: 4rem auto;
@@ -32,15 +33,15 @@
 
 input {
     border: none;
-    background: var(--tertiary-color);
+    background: #111c29;
     outline: none;
-    color: var(--primary-color2);
+    color: var(--tertiary-color2);
     padding: 0.5rem 2.5rem;
     border-radius: 5px;
 }
 
 input::placeholder {
-    color: var(--primary-color2);
+    color: var(--tertiary-color2);
 }
 
 .weather_search {
@@ -52,7 +53,7 @@ input::placeholder {
     left: 10px;
     top: 10px;
     font-size: 15px;
-    color: var(--tertiary-color);
+    color:var(--primary-color2);
 }
 
 .weather_units {
@@ -72,14 +73,18 @@ input::placeholder {
     margin-top: 3rem;
 }
 
+.weather_city {
+    color: #fff;
+}
+
 .weather_datetime {
     margin-bottom: 2rem;
     font-size: 14px;
 }
 
 .weather_forecast {
-    background: var(--tertiary-color);
-    color: var(--primary-color2);
+    background: var(--primary-color);
+    color: var(--tertiary-color2);
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 30px;
@@ -116,6 +121,7 @@ input::placeholder {
     display: flex;
     align-items: center;
     background: var(--tertiary-color);
+    color: var(--primary-color2);
     padding: 1rem;
     border-radius: 30px;
 }
