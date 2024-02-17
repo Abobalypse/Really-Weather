@@ -25,6 +25,27 @@ document.querySelector(".weather_search").addEventListener("submit", e => {
     getWeather();
 })
 
+//units
+document.querySelector(".weather_unit_farenheit").addEventListener("click", () => {
+    if(units !== "imperial"){
+        //change to celsius
+        units = "imperial"
+        //get weather forecast
+        getWeather()
+        // clear form
+        search.value = ""
+    }
+})
+
+document.querySelector(".weather_unit_celsius").addEventListener("click", () => {
+    if(units !== "metric"){
+        //change to celsius
+        units = "metric"
+        //get weather forecast
+        getWeather()
+    }
+})
+
 function convertTimeStamp(timestamp, timezone){
     const convertTimezone = timezone / 3600;
 
@@ -65,7 +86,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=${
     <p>Max:${data.main.temp_max.toFixed()}&#176</p>`
     weather_realfeel.innerHTML = `${data.main.feels_like.toFixed()}&#176`
     weather_humidity.innerHTML = `${data.main.humidity}%`
-    weather_wind.innerHTML = `${data.wind.speed} f/s`
+    weather_wind.innerHTML = `${data.wind.speed} ${units === "imperial" ? "mph":"m/s"}` 
     weather_pressure.innerHTML = `${data.main.pressure} hPa`
 })
 }
