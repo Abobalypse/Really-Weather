@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Really Weather</title>
+</head>
+<body>
+    <div class="container">
+        <div class="weather_header">
+            <form class="weather_search">
+                <input type="text" placeholder="Search for a city..." class="weather_searchform">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+            <div class="weather_units">
+                <span class="weather_unit_celsius">
+                    &#176C
+                </span>
+                <span class="weather_unit_farenheit">
+                    &#176F
+                </span>
+            </div>
+        </div>
+        <div class="weather_body">
+            <h1 class="weather_city">New York, US</h1>
+            <div class="weather_datetime">
+                <p>Monday February 16th, 2024 9:42PM</p>
+            </div>
+            <div class="weather_forecase">
+                <p>Clear</p>
+            </div>
+            <div class="weather_icon">
+                <img src="http://openweathermap.org/img/wn/01d@2x.png">
+            </div>
+            <p class="weather_temperature">
+                18&#176F
+            </p>
+            <div class="weather_minmax">
+                <p>Min: 12&#176</p>
+                <p>Max: 16&#176</p>
+            </div>
+        </div>
+
+        <div class="weather_info">
+            <div class="weather_card">
+                <i class="fa-solid fa-temperature=full"></i>
+                <div>
+                    <p>Real Feel</p>
+                    <p class="weather_realfeel">18&#176</p>
+                    <!-- https://www.youtube.com/watch?v=hIHsDIJUL3A  11:04 MARK -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a692e1c39f.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
